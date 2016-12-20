@@ -1,0 +1,104 @@
+<body id="pageAcc">
+  <div class="container">
+    <header id="headerBody">
+
+<!-- permet de chercher un article -->
+      <h3 id="titreRecherche">Rechercher un article </h3>
+      <form id="tfnewsearch">
+       <input type="text" class="tftextinput" id="tftextinput" size="35" maxlength="120"><input type="button" value="search" class="tfbutton">
+      </form>
+<!-- //////////////////////////// -->
+
+      {{#if currentUser}}
+      <div id="whereAmi">
+        <span title="En cliquant sur ce bouton vous accepter d'ajouter votre localisation dans les informations de l'article"><button type="submit" class="posBut">Me localiser</button></span>
+      </div>
+      <div id="mesArticles">
+          <button type="button" id="showMesArticles">Afficher mes articles</button>
+      </div>
+      {{/if}}
+      {{#if wantLoc}}
+      <div id="instagramFeed">
+          <button type="button" id="goToInstagramFeed">Afficher les photos de v__jerome</button>
+      </div>
+      {{/if}}
+      <div id="connexion">
+        <button type="submit" class="loginLink">{{> loginButtons}}</button>
+      {{#if currentUser}}
+      {{#if wantLoc}}
+        <p>Vous êtes à: {{where}}</p>
+      {{/if}}
+      {{/if}}
+      </div>
+<!-- cela appelle le template "ajoutement" qui contient le formulaire d'ajout si nous sommes connectés-->
+      {{#if currentUser}}
+          {{> ajoutement}}
+      {{/if}}
+<!-- ////////////////////////////////////////////////////////////////// -->
+    </header>
+
+
+    <!-- cela appelle le template "instagramFeed" qui permet de voir les posts en fonction de certains # -->
+      {{#if wantInsta}}
+      <div id="IF">
+        <h1 id="titreInsta">Les photos de v__jerome</h1>
+          {{> instagramfeed}}
+      </div>
+      {{/if}}
+    <!-- ////////////////////////////////////////////////////////////////// -->
+    <div>
+    <h1 id="titreListe">Les articles</h1>
+<!-- partie pour afficher tous les articles -->
+    <ul id="lesArticles">
+      {{#each articles}}
+        {{> article}}
+      {{/each}}
+    </ul>
+<!-- ///////////////////////////////////// -->
+    </div>
+<!-- partie qui appraît lorsque l'on clique sur "modify" de la page article.html -->
+  {{#if wantModif}}
+    {{> modify}}
+  {{/if}}
+<!-- /////////////////////////////////// -->
+
+<!-- Partie pour essayer de montrer une map google key=AIzaSyBPztiDLCK3lz3aPqlh3WhVv_3490mr_XA -->
+  {{#if currentUser}}
+    {{#if wantLoc}}
+    <div id ="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPztiDLCK3lz3aPqlh3WhVv_3490mr_XA&callback=initMap">
+    </script>
+    {{/if}}
+  {{/if}}
+<!-- //////////////////////////////////////////// -->
+  </div>
+ <a href="#" class="scrollup">Back to top</a>
+ <input type="hidden" id="nextArt">
+
+ <footer class="footer">
+   		<div class="footer-left">
+   		<h3>Vial<span>Feed</span></h3>
+   			<p class="footerCN">Vial industries &copy; 2016</p>
+   		</div>
+
+      <div>
+   		<p id="ctUs">Contact Us</p>
+   		<form action="#" method="post">
+   			<input id="email" type="text" name="email" placeholder="Email" />
+   			<textarea id="msg" name="message" placeholder="Message"></textarea>
+   			<button id="sendFeedBack">Send</button>
+   		</form>
+      </div>
+
+      <div id="logoG">
+        <p class="footerCN">Sponsored by</p>
+        <img src= "images/logo.png"/>
+        <img src= "images/logoDis.png"/>
+        <img src= "images/logoSB.png"/>
+        <img src= "images/logoNike.png"/>
+        <img src= "images/logoIM.png"/>
+        <img src= "images/logoFF.png"/>
+      </div>
+ </footer>
+</body>

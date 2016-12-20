@@ -1,0 +1,18 @@
+<template name="modify">
+    <h1 id="titreAjout">Modification d'un article</h1>
+            <form id="formModif" class="modifyArticle">
+              <div>
+                <label for="titre">Titre :</label>
+                <textarea id="titreModif">{{titreTemp}}</textarea>
+              </div>
+              <div>
+                <label for="text">Texte :</label>
+                <textarea id="textModif"> {{textTemp}} </textarea>
+              </div>
+              <div>
+                <label for="photo">Source photo:</label>
+                <textarea id="photoModif">{{photoTemp}}</textarea>
+              </div>
+            <button id="modif" type="submit" value="submit">Modifier</button>
+            </form>
+</template>
