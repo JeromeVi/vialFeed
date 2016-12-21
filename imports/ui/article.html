@@ -1,0 +1,25 @@
+<!-- cela représente un article -->
+<template name="article">
+
+  <li class="liArticle">
+    <div>
+        <img id="pic" src= {{photo}} />
+    </div>
+    <div>
+        <label class="titreArticle">{{titre}}</label>
+        {{#if isOwner}}
+           {{#unless wantModif}}
+        <button class="delete" style="color:black">&times;</button>
+        <button class="modify" style="color:black">modifier</button>
+          {{/unless}}
+        {{/if}}
+        <p id="dateHeure"><strong>Ecrit par: {{username}} le {{date}} à {{heure}} {{lieux}} </strong></p>
+        <br>
+    </div>
+    <div id="textContenu">
+        <span class="mySpan">{{text}}</span>
+    </div>
+    <button type="button" class="readMore hidden">lire la suite </button>
+    <button type="button" class="readAll hidden">retourner sur le site </button>
+  </li>
+</template>

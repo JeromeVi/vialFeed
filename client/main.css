@@ -1,0 +1,311 @@
+/* page de base */
+#vialFeed{
+	/*font-family: "Black Ops One";
+	font-family: "Orbitron";
+	font-family: "Mountains of Christmas";
+	font-family: "Nosifer Caps";
+	font-family: "Coockie";*/
+	font-family: "Cinzel",serif;
+	font-weight: 500;
+	font-size: 70pt;
+	transition: color 1s;
+	color: #132523;
+	letter-spacing: .2em;
+	line-height: 1.1em;
+	margin:0px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#vialFeed:hover {
+	font-family: "Orbitron";
+  color: #b33d51;
+}
+.loginLink{
+	display: inline-block;
+	margin-top: 10px;
+	float:right;
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: #b6d9dd;
+}
+#goToInstagramFeed{
+	display: inline-block;
+	margin-top: 10px;
+	float:right;
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: #b6d9dd;
+}
+#showMesArticles{
+	display: inline-block;
+	margin-top: 10px;
+	float:right;
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: #b6d9dd;
+}
+.posBut{
+	display: inline-block;
+	margin-top: 10px;
+	float:right;
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: #b6d9dd;
+}
+.hidden{
+	display:none;
+}
+
+#pageAcc{
+  background-color: #b6d9dd;
+}
+#map{
+	width:600px;
+  height:450px;
+	border: 0;
+}
+#titreRecherche{
+	font-family: Sancreek;
+  color: #b33d51;
+}
+.scrollup {
+	width: 40px;
+	height: 40px;
+	opacity: 0.5;
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+}
+#nextArt {
+	width: auto;
+	height: auto;
+	opacity: 0.7;
+	position: fixed;
+	bottom: 500px;
+	right: 100px;
+}
+/* --------------------------------------------- */
+/* Liste des articles */
+#lesArticles{
+	list-style-type: none;
+	width: auto;
+}
+#pic{
+  float: left;
+  margin: 0 15px 0 0;
+	width:250px;
+}
+li span {
+  font-size: 15pt;
+	font-weight: bolder;
+	font-family: Arial;
+	color: black;
+	float: inherit;
+}
+li {
+  padding: 10px;
+  overflow: auto;
+	border: 3px solid #b33d51;
+	border-radius: 1em;
+	margin-bottom: 5px;
+}
+#textContenu{
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: -0.5cm;
+}
+.titreArticle{
+  display: inline-block;
+	white-space: nowrap;
+	font: 100 30pt Georgia, Times New Roman, serif;
+	color: #b33d51;
+}
+#dateHeure{
+	font-size: 10pt;
+	font-weight: bolder;
+	font-family: Arial;
+	font-style: italic;
+	color: black;
+	float:inherit;
+}
+#titreListe{
+	font-family: Sancreek;
+	font-size: 35pt;
+  color: #b33d51;
+  text-align: center;
+}
+.delete{
+	width: 25px;
+	height: 25px;
+	text-align: auto;
+	margin-left: 10px;
+  margin-left: auto;
+	font-size: 10pt;
+}
+.modify{
+	width: 75px;
+	height: 25px;
+	text-align: center;
+	font-size: 10pt;
+}
+.readMore{
+	float: right;
+	font-size: 10pt;
+}
+.readAll{
+	font-size: 10pt;
+}
+/* --------------------------------------------- */
+/* Formulaire d'ajout et de modification d'articles*/
+form{
+	margin: 0 15px 20px 0;
+  width: 400px;
+  padding: 1em;
+  border: 3px solid #b33d51;
+  border-radius: 1em;
+}
+form div + div {
+  margin-top: 1em;
+}
+form button{
+	margin-left: 7cm;
+	width: 90px;
+	border-radius: 1em;
+}
+label {
+	font-family: Sancreek;
+  display: flex;
+  width: auto;
+  text-align: right;
+	color: #b33d51;
+}
+#titre{
+	display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+#text{
+	display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+#photo{
+	display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+#titreModif{
+	display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+#textModif{
+	display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+#photoModif{
+	display: inline-block;
+  width: 300px;
+  text-align: left;
+}
+#titreAjout{
+	font-family: Sancreek;
+  color: #b33d51;
+}
+/* --------------------------------------------- */
+/* Instagram feed -------------------------------- */
+#IF{
+width: 635px;
+padding: 10px;
+border: 3px solid #b33d51;
+border-radius: 1em;
+margin-top: -250px;
+margin-left: 500px;
+}
+
+#titreInsta{
+	font-family: Sancreek;
+	display: flex;
+	width: auto;
+	text-align: right;
+	color: #b33d51;
+}
+/* --------------------------------------------- */
+/* pied de page -------------------------------- */
+.footer{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+
+	padding:  20px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+.footer h3{
+	color:  white;
+	font: normal 36px 'Cookie', cursive;
+}
+.footer h3 span{
+	color:  #b33d51;
+}
+.footerCN{
+	margin-top: -15px;
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+}
+#ctUs{
+	display: block;
+	vertical-align: top;
+	margin: 5px 0 0 0;
+	color: #ffffff;
+}
+.footer form{
+	margin-top: 10px;
+	display: inline-block;
+	width: auto;
+}
+#email, #msg{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+	width: 400px;
+	padding: 18px;
+}
+#email{
+	height: 55px;
+	margin-bottom: 15px;
+}
+#msg{
+	height: 100px;
+	margin-bottom: 20px;
+}
+.footer form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding-top: 10px;
+	font-weight: bold;
+	float: right;
+}
+
+#logoG{
+	margin-top: 50px;
+	float: left;;
+}
+#logoG img{
+	width: 300px;
+}
