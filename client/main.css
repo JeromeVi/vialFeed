@@ -258,6 +258,46 @@ margin-left: 500px;
 	font-size: 14px;
 	font-weight: normal;
 }
+
+.wrapper {
+  overflow:hidden;
+}
+
+.wrapper div {
+   min-height: 200px;
+   padding: 10px;
+}
+#one {
+  float:left;
+  margin-right:20px;
+  width:200px;
+}
+#two {
+  overflow:hidden;
+  margin:10px;
+	float:right;
+}
+
+@media screen and (max-width: 400px) {
+   #one {
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+  }
+}
+
+/*
+.parentA div{
+
+}
+.foot-left{
+
+}
+.footer-right{
+
+}
+*/
 #ctUs{
 	display: block;
 	vertical-align: top;
