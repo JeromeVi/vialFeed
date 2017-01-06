@@ -1,7 +1,10 @@
 /* page de base */
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 #vialFeed{
 	/*font-family: "Black Ops One";
 	font-family: "Orbitron";
@@ -61,6 +64,7 @@
 
 #pageAcc{
   background-color: #b6d9dd;
+<<<<<<< HEAD
 	/* permet de mettre l'imge de façon "infinie" on arrive jamais à la fin sauf en bas du site */
 	background: url(images/wp3.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -68,6 +72,8 @@
 	-o-background-size: cover;
 	background-size: cover;
 	/* ----------------------------------------------------------------------------------------- */
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 }
 #map{
 	width:600px;
@@ -94,6 +100,7 @@
 	bottom: 500px;
 	right: 100px;
 }
+<<<<<<< HEAD
 #backSite {
 	width: auto;
 	height: auto;
@@ -102,6 +109,8 @@
 	bottom: 500px;
 	right: 100px;
 }
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 /* --------------------------------------------- */
 /* Liste des articles */
 #lesArticles{
@@ -173,6 +182,7 @@ li {
 .readAll{
 	font-size: 10pt;
 }
+<<<<<<< HEAD
 .highlight {
 	display: inline-block;
 	white-space: nowrap;
@@ -180,6 +190,8 @@ li {
 	color: #b33d51;
   background-color: yellow;
 }
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 /* --------------------------------------------- */
 /* Formulaire d'ajout et de modification d'articles*/
 form{
@@ -283,6 +295,7 @@ margin-left: 500px;
 	font-size: 14px;
 	font-weight: normal;
 }
+<<<<<<< HEAD
 
 /* permet d'aligner le bas de la page et de le rendre responsiv */
 .wrapper {
@@ -324,6 +337,8 @@ margin-left: 500px;
 
 }
 */
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 #ctUs{
 	display: block;
 	vertical-align: top;

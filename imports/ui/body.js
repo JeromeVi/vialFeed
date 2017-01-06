@@ -165,10 +165,15 @@ Template.body.events({
    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
    //pour aller tout en bas là où il y a la map
    setTimeout(function(){
+<<<<<<< HEAD
       window.scrollTo(0,$('#map').offset().top);
    }, 50)
 
 
+=======
+      window.scrollTo(0,document.body.scrollHeight);
+   }, 50)
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
  },
 //-------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -217,6 +222,7 @@ Template.body.events({
           //on ajoute la position de cet article dans le tableaux
           lesPositions.push(obj.offsetTop);
           lesTitres.push(actual);
+<<<<<<< HEAD
           //on surligne les occurences
           var highlightRe = /<span class="highlight">(.*?)<\/span>/g,
               highlightHtml = '<span class="highlight">$1</span>';
@@ -225,6 +231,8 @@ Template.body.events({
                   txt = txt.replace(new RegExp('(' + research + ')', 'gi'), highlightHtml);
           }
           $(this).html(txt);
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
           //on va sur le premier index du tableau
           window.scrollTo(0,lesPositions[0]);
           document.getElementById('tftextinput').value = "";
@@ -235,7 +243,10 @@ Template.body.events({
     });
    if(nombreValide == 0){
      alert("impossible de trouver un article contenant votre recherche");
+<<<<<<< HEAD
      location.reload();
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
    }else if(nombreValide == 1){
      console.log("Il y a un seul article qui correspond à la recherche");
    }else{
@@ -259,18 +270,24 @@ Template.body.events({
     index = 1;
     lesPositions.length = 0;
     document.getElementById("nextArt").setAttribute('type','hidden');
+<<<<<<< HEAD
     //et on met celui pour re-afficher tous les articles
     document.getElementById("backSite").setAttribute('type','button');
     document.getElementById("backSite").setAttribute('value','retour sur le site');
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
   }
   },
 //-------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 'click #backSite'(event){
   location.reload();
   },
 //-------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 'click #showMesArticles'(event){
 
   var id = Meteor.userId();
@@ -337,10 +354,13 @@ Template.body.events({
     $('#msg').val('');
   }
 },
+<<<<<<< HEAD
 
 'click #vialFeed'(event){
   location.reload();
 },
+=======
+>>>>>>> 3045104f5561121f10efc0e30c03081135ecfd82
 });
 
 // permet d'effacer les variables de Session lorsque l'on se déconnecte
