@@ -217,6 +217,14 @@ Template.body.events({
           //on ajoute la position de cet article dans le tableaux
           lesPositions.push(obj.offsetTop);
           lesTitres.push(actual);
+          //on surligne les occurences
+          var highlightRe = /<span class="highlight">(.*?)<\/span>/g,
+              highlightHtml = '<span class="highlight">$1</span>';
+          var txt = actual.replace(highlightRe,'$1');
+          if(research !== '') {
+                  txt = txt.replace(new RegExp('(' + research + ')', 'gi'), highlightHtml);
+          }
+          $(this).html(txt);
           //on va sur le premier index du tableau
           window.scrollTo(0,lesPositions[0]);
           document.getElementById('tftextinput').value = "";
@@ -227,6 +235,7 @@ Template.body.events({
     });
    if(nombreValide == 0){
      alert("impossible de trouver un article contenant votre recherche");
+     location.reload();
    }else if(nombreValide == 1){
      console.log("Il y a un seul article qui correspond à la recherche");
    }else{
@@ -250,7 +259,15 @@ Template.body.events({
     index = 1;
     lesPositions.length = 0;
     document.getElementById("nextArt").setAttribute('type','hidden');
+    //et on met celui pour re-afficher tous les articles
+    document.getElementById("backSite").setAttribute('type','button');
+    document.getElementById("backSite").setAttribute('value','retour sur le site');
   }
+  },
+//-------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------
+'click #backSite'(event){
+  location.reload();
   },
 //-------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -319,6 +336,10 @@ Template.body.events({
     $('#email').val('');
     $('#msg').val('');
   }
+},
+
+'click #vialFeed'(event){
+  location.reload();
 },
 });
 
